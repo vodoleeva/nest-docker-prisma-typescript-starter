@@ -1,0 +1,21 @@
+// Prisma schema file
+// docs: https://pris.ly/d/prisma-schema
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Oil {
+  id   Int    @id @default(autoincrement())
+  name String
+}
+
+model Car {
+  id   Int    @id @default(autoincrement())
+  name String
+}
